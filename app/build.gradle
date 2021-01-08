@@ -32,6 +32,12 @@ android {
 
 }
 
+repositories {
+    maven {
+        url "http://maven.google.com/"
+    }
+}
+
 dependencies {
     implementation "com.mikepenz:materialdrawer:8.1.8"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -62,4 +68,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:22.0.1'
     implementation 'com.github.Semper-Viventem:BackdropView:0.1.7'
     implementation 'com.github.st235:expandablebottombar:1.3.0'
+    implementation 'com.yandex.android:maps.mobile:4.0.0-lite'
 }

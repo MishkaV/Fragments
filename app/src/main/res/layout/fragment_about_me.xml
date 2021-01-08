@@ -1,11 +1,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aboutMeFrag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="view.fragments.meScreen.aboutMe.AboutMe"
+    android:background="@drawable/layout_me_backgroud"
     android:orientation="vertical"
-    android:background="@drawable/layout_me_backgroud">
+    tools:context="view.fragments.meScreen.aboutMe.AboutMe">
 
     <TextView
         android:id="@+id/aboutMeText"
@@ -15,37 +16,35 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
-        android:gravity="center_vertical"
         android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center_vertical"
         android:text="О себе"
         android:textSize="36sp" />
 
     <TextView
-        android:layout_below="@+id/aboutMeText"
         android:id="@+id/nameText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_below="@+id/aboutMeText"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:textSize="28sp"
-        />
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:textSize="28sp" />
 
 
     <TextView
         android:id="@+id/surnameText"
-        android:layout_below="@+id/nameText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_below="@+id/nameText"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:textSize="28sp"
-        />
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:textSize="28sp" />
 
     <Button
         android:id="@+id/changeAboutMe"
@@ -53,14 +52,13 @@
         android:layout_height="60dp"
         android:layout_below="@+id/surnameText"
         android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
-        android:textColor="@color/colorPrimary"
         android:onClick="onClick"
         android:text="Редактировать"
-        />
+        android:textColor="@color/colorPrimary" />
 
 
 </RelativeLayout>

@@ -1,38 +1,38 @@
 package view.activities
 
-import model.FirebaseRequests
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import view.fragments.*
-import view.fragments.homeScreen.detailsScreen.ItemRecyclerMore
+import com.example.gaiety.R
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetBehavior.BottomSheetCallback
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.change_about_me.*
+import kotlinx.android.synthetic.main.fragment_login.*
+import kotlinx.android.synthetic.main.fragment_register.*
+import kotlinx.android.synthetic.main.fragment_reset_password.*
+import model.FirebaseRequests
+import presenter.meScreen.BottomSheetFragment
+import view.fragments.MainFragment
 import view.fragments.homeScreen.HomeFragment
+import view.fragments.homeScreen.detailsScreen.ItemRecyclerMore
 import view.fragments.loginScreen.LoginFragment
 import view.fragments.loginScreen.resetPassword.ResetPasswordFragment
-import view.fragments.meScreen.myOrganizationsScreen.AddOrganizationScreen.AddOrganizationFragment
 import view.fragments.meScreen.MeFragment
+import view.fragments.meScreen.aboutMe.AboutMe
+import view.fragments.meScreen.aboutMe.ChangeAboutMe
+import view.fragments.meScreen.myFavoriteEventsScreen.MyFavoriteEvents
+import view.fragments.meScreen.myOrganizationsScreen.AddOrganizationScreen.AddOrganizationFragment
 import view.fragments.meScreen.myOrganizationsScreen.MyOrganizationsFragment
 import view.fragments.meScreen.myTicketsScreen.myTickets
 import view.fragments.registerScreen.RegisterFragment
 import view.fragments.startScreen.StartFragment
-import com.example.gaiety.R
-import com.google.firebase.auth.FirebaseAuth
-import github.com.st235.lib_expandablebottombar.ExpandableBottomBar
-import kotlinx.android.synthetic.main.change_about_me.*
-import kotlinx.android.synthetic.main.fragment_login.*
-import kotlinx.android.synthetic.main.fragment_main.*
-import kotlinx.android.synthetic.main.fragment_register.*
-import kotlinx.android.synthetic.main.fragment_reset_password.*
-import presenter.meScreen.BottomSheetFragment
-import view.fragments.meScreen.aboutMe.AboutMe
-import view.fragments.meScreen.aboutMe.ChangeAboutMe
-import view.fragments.meScreen.myFavoriteEventsScreen.MyFavoriteEvents
+
 
 private const val TAG = "TAG"
 val firebaseRequests = FirebaseRequests()
@@ -248,9 +248,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.changeAboutMe -> {
                 makeCurrentFragment(changeAboutMe, "changeAboutMe")
-
             }
-
             R.id.changeButtonFrag -> {
                 change(bottomSheetFragment)
             }

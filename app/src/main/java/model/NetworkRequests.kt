@@ -44,7 +44,6 @@ class NetworkRequests {
         return api
     }
 
-
     fun eventRequest(
         numList: RecyclerView,
         skip: Int,
