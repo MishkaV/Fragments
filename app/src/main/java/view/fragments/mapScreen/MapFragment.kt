@@ -10,6 +10,7 @@ import com.yandex.mapkit.Animation
 import com.yandex.mapkit.MapKitFactory
 import com.yandex.mapkit.geometry.Point
 import com.yandex.mapkit.map.CameraPosition
+import com.yandex.mapkit.map.PlacemarkMapObject
 import com.yandex.mapkit.mapview.MapView
 import com.yandex.runtime.image.ImageProvider
 import com.yandex.runtime.ui_view.ViewProvider
@@ -46,7 +47,8 @@ class MapFragment : Fragment() {
             background = requireContext().getDrawable(R.drawable.ic_location)
         }
         //Ставим метку
-        mapView.map.mapObjects.addPlacemark(Point(55.751574, 37.573856), ViewProvider(view))
+        mapView.map.mapObjects.addPlacemark(Point(55.751574, 37.57385), ViewProvider(view))
+
 
     }
 
